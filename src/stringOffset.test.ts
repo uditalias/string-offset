@@ -19,5 +19,19 @@ describe("StringOffset", () => {
             ]);
 
         });
+
+        it("should split the string when only one offset is present", () => {
+
+            const offsets = [
+                { offset: 6, length: 5 },
+            ];
+
+            const split = stringOffset("Hello World", offsets);
+
+            expect(split).toMatchObject([
+                "Hello ", "World"
+            ]);
+
+        });
     });
 });

@@ -24,7 +24,7 @@
     "email": "udi.talias@gmail.com",
     "url": "https://github.com/uditalias"
   },
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@types/jest": "24.0.18",
     "@types/node": "12.7.5",

@@ -8,4 +8,4 @@ node_modules/
 coverage/
 
 lib/
-umd/s
+umd/

@@ -33,5 +33,25 @@ describe("StringOffset", () => {
             ]);
 
         });
+
+        it("should return empty list when no offsets", () => {
+
+            const split = stringOffset("Hello World", []);
+
+            expect(split).toMatchObject([]);
+        });
+
+        it("should return only one part when offset size is bigger then string size", () => {
+
+            const offsets = [
+                { offset: 0, length: 100 },
+            ];
+
+            const split = stringOffset("Hello World", offsets);
+
+            expect(split.length).toBe(1);
+
+            expect(split[0]).toBe("Hello World");
+        });
     });
 });

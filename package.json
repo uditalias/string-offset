@@ -4,6 +4,11 @@
   "description": "",
   "main": "lib/index.js",
   "typings": "lib/StringOffset.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uditalias/string-offset.git"
+  },
+  "homepage": "https://github.com/uditalias/string-offset/blob/master/README.md",
   "scripts": {
     "test": "jest",
     "test:cov": "jest --coverage",

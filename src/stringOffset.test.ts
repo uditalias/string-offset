@@ -4,6 +4,29 @@ describe("StringOffset", () => {
 
     describe("Functionality", () => {
 
+        it("Should split the string and return the ending", () => {
+            const offsets = [
+                { offset: 1, length: 2 },
+            ];
+            const split = stringOffset("option1", offsets);
+
+            expect(split).toMatchObject([
+                "o", "pt", "ion1"
+            ]);
+        });
+
+        it("Should split the string - last char is also indexed", () => {
+            const offsets = [
+                { offset: 1, length: 2 },
+                { offset: 6, length: 1 },
+            ];
+            const split = stringOffset("option1", offsets);
+
+            expect(split).toMatchObject([
+                "o", "pt", "ion", "1"
+            ]);
+        });
+
         it("should split the string by the given offsets", () => {
 
             const offsets = [
